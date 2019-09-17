@@ -21,7 +21,7 @@ window.convertToPWorld = function(position){
 }
 
 window.convertToNode = function(worldPoint){
-    let leftUpPos = cc.pMult(worldPoint,SCALE);
+    let leftUpPos = cc.p(worldPoint.x * SCALE, worldPoint.y * SCALE);
     let leftDownPos = cc.v2(leftUpPos.x,leftUpPos.y);
     return leftDownPos;
 }
